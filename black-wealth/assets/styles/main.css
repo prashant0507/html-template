@@ -1,0 +1,360 @@
+/**--- FONT SIZE ---*/
+/**--- FONT COLOR ---*/
+:root {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-family: "Fidelity Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+.container-fluid {
+  max-width: 100%;
+}
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.container-expand {
+  width: 1400px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.d-flex {
+  display: flex;
+}
+.d-block {
+  display: block;
+}
+.m-0 {
+  margin: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.pt-0 {
+  padding-top: 0;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+.p-0 {
+  padding: 0;
+}
+p {
+  font-size: 1.8rem;
+}
+a {
+  font-size: 1.6rem;
+}
+h1 {
+  font-size: 5.2rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h5 {
+  font-size: 2.4rem;
+}
+h6 {
+  font-size: 2rem;
+}
+sup {
+  font-size: 1.5rem;
+}
+.btn {
+  padding: 1.2rem 3.1rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-secondry {
+  background-color: #fff;
+  color: #000;
+}
+.btn-primary {
+  background-color: #368727;
+  color: white;
+}
+.btn.btn-secondry:hover {
+  background-color: #f1f3c3;
+}
+.btn-primary:hover {
+  background-color: #2b6f21;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.font-normal {
+  font-weight: normal;
+}
+header {
+  padding: 20px;
+  max-height: 60px;
+  box-sizing: border-box;
+}
+header img {
+  width: 123px;
+}
+.top-banner {
+  background-color: #f1f4cb;
+}
+.top-banner .container-expand {
+  background-image: url("../images/hero-banner-1.jpeg");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: inherit;
+}
+.top-banner .container-expand .left {
+  width: 430px;
+  max-width: 100%;
+  padding-top: 120px;
+  padding-bottom: 129px;
+}
+.top-banner .container-expand .left h1 {
+  margin: 0;
+}
+.community-update {
+  background-color: #009681;
+  padding: 5.5rem 0;
+  color: white;
+}
+.community-update .bottom-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.community-update .bottom-left p {
+  width: 78rem;
+}
+.community-update .bottom-left a {
+  color: white;
+}
+.community-update .bottom-left a.btn {
+  color: black;
+}
+.financial-support {
+  background-color: #c4e5b7;
+  padding: 6.5rem 0;
+}
+.financial-support .container {
+  justify-content: space-between;
+}
+.financial-support .container .left {
+  width: 37.5rem;
+}
+.financial-support .container .left h3 {
+  font-weight: normal;
+}
+.financial-support .container .right {
+  cursor: pointer;
+  outline: 1rem solid #fff;
+  width: 570px;
+  height: 322px;
+}
+.financial-support .container .right video {
+  width: 100%;
+}
+.fidility-webinar {
+  background-color: hsl(294, 42%, 40%);
+  color: white;
+}
+.fidility-webinar .left {
+  background-image: url("../images/registration-image.jpeg");
+  width: 565px;
+  background-size: 100%;
+}
+.fidility-webinar .right {
+  margin-left: 5.5rem;
+  width: 630px;
+  max-width: 100%;
+  padding: 5.1rem 0;
+}
+.fidility-webinar .right .bottom-right {
+  justify-content: space-between;
+  align-items: center;
+}
+.tab-section ul {
+  gap: 1.5rem;
+}
+.tab-section ul li {
+  padding: 1.6rem;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: #758592;
+  list-style: none;
+  flex: 1;
+  position: relative;
+}
+.tab-section ul li.active,
+.tab-section ul li:hover {
+  background-color: #28313b;
+}
+.tab-section ul li.active .arrow {
+  display: block;
+}
+.tab-section ul li:first-child {
+  padding-left: 15.7rem;
+}
+.tab-section ul li:first-child .arrow {
+  left: 38.5rem;
+}
+.tab-section ul li:last-child {
+  padding-right: 15.7rem;
+}
+.tab-section ul li:last-child .arrow {
+  left: 26.5rem;
+}
+.tab-section ul li .arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #2f2f2f;
+  font-size: 0;
+  line-height: 0;
+  float: left;
+  position: absolute;
+  top: 6rem;
+  display: none;
+}
+.tab-section .tab-content {
+  display: none;
+}
+.tab-section .tab-content.active {
+  display: block;
+}
+.tab-section .community-env .title,
+.tab-section .financial-fundamentals .title {
+  padding-top: 5.5rem;
+  padding-bottom: 3.6rem;
+}
+.tab-section .community-env .boxes,
+.tab-section .financial-fundamentals .boxes {
+  display: flex;
+  padding-bottom: 13rem;
+  gap: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tab-section .community-env .boxes .box,
+.tab-section .financial-fundamentals .boxes .box {
+  background-color: #eff4f5;
+  position: relative;
+  width: 32%;
+}
+.tab-section .community-env .boxes .box img,
+.tab-section .financial-fundamentals .boxes .box img {
+  object-fit: cover;
+  width: 100%;
+}
+.tab-section .community-env .boxes .box .box-content,
+.tab-section .financial-fundamentals .boxes .box .box-content {
+  padding: 0 2.5rem 8.5rem 2.5rem;
+}
+.tab-section .community-env .boxes .box .box-content h5,
+.tab-section .financial-fundamentals .boxes .box .box-content h5 {
+  margin: 1.6rem 0;
+}
+.tab-section .community-env .boxes .box .box-content .btn-wrapper,
+.tab-section .financial-fundamentals .boxes .box .box-content .btn-wrapper {
+  position: absolute;
+  bottom: 3rem;
+  width: calc(100% - 5rem);
+  display: flex;
+  justify-content: center;
+}
+.tab-section .financial-fundamentals .boxes .box .box-content .btn-wrapper {
+  justify-content: left;
+}
+.tab-section .financial-fundamentals .money-grow {
+  padding: 7rem 0 5rem 0;
+  background-color: #dcf3ee;
+}
+.tab-section .financial-fundamentals .money-grow .blocks {
+  padding-left: 3.5rem;
+}
+.tab-section .financial-fundamentals .money-grow .blocks .block {
+  margin-bottom: 6rem;
+}
+.tab-section .financial-fundamentals .money-grow .blocks .block-right {
+  padding-left: 3.5rem;
+}
+.latino-community {
+  background-color: #368727;
+  padding: 7.5rem 0;
+  color: white;
+}
+.latino-community .top-subtitle {
+  margin-bottom: 6rem;
+}
+.latino-community .bottom-subtitle {
+  margin-top: 7.5rem;
+}
+.latino-community .boxes {
+  color: #000;
+  gap: 4rem;
+}
+.latino-community .boxes .box {
+  background-color: #f8f9e5;
+  padding: 4.5rem 0;
+  padding-left: 4.1rem;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.latino-community .boxes .box .box-content {
+  padding-right: 20rem;
+}
+.latino-community .boxes .box .btn-wrapper {
+  margin-top: 6rem;
+}
+.latino-community .boxes .box p {
+  padding-right: 3rem;
+}
+.latino-community .boxes .box a {
+  width: 14rem;
+}
+.latino-community .boxes .box.box-start .box-content {
+  padding-right: 22rem;
+}
+.latino-community .boxes .box-login {
+  background-image: url("../images/action-img-1.jpeg");
+}
+.latino-community .boxes .box-start {
+  background-image: url("../images/action-img-2.jpeg");
+}
+.latino-community .bottom {
+  margin-top: 1.2rem;
+}
+.latino-community .bottom p {
+  width: 63rem;
+  max-width: 100%;
+  padding-right: 5rem;
+}
+footer {
+  padding: 8.2rem 0;
+  text-align: center;
+  color: #758592;
+}
+footer .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+footer .logo img {
+  width: 213px;
+}
+footer .copyright p {
+  margin: 0;
+  font-size: 1.5rem;
+}

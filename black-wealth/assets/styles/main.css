@@ -168,7 +168,8 @@ header img {
 .fidility-webinar .left {
   background-image: url("../images/registration-image.jpeg");
   width: 565px;
-  background-size: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 .fidility-webinar .right {
   margin-left: 5.5rem;

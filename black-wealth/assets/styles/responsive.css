@@ -16,6 +16,17 @@
     padding-top: 5rem;
     padding-bottom: 4.3rem;
   }
+  .fidility-webinar .container-expand {
+    flex-direction: column-reverse;
+  }
+  .fidility-webinar .left {
+    background-image: url("../images/register-img-mobile.jpeg");
+    width: auto;
+    height: 39rem;
+  }
+  .fidility-webinar .right {
+    padding-left: 2rem;
+  }
   .container {
     padding: 0 2rem;
     box-sizing: border-box;

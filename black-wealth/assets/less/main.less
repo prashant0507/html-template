@@ -1,0 +1,291 @@
+@import "typography";
+@import "layout";
+
+// HEADER SECTION START
+header {
+  padding: 20px;
+  max-height: 60px;
+  box-sizing: border-box;
+  img {
+    width: 123px;
+  }
+}
+
+// TOP BANNER SECTION
+.top-banner {
+  background-color: #f1f4cb;
+  .container-expand {
+    background-image: url("../images/hero-banner-1.jpeg");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: inherit;
+    .left {
+      width: 43rem;
+      max-width: 100%;
+      padding-top: 12.5rem;
+      padding-bottom: 12.5rem;
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// COMMUNITY UPDATE
+.community-update {
+  background-color: #009681;
+  padding: 5.5rem 0;
+  color: @clr-secondry;
+  .bottom-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      width: 78rem;
+    }
+    a {
+      color: @clr-secondry;
+      &.btn {
+        color: black;
+      }
+    }
+  }
+}
+
+// FINANCIAL SUPPORT
+.financial-support {
+  background-color: #c4e5b7;
+  padding: 6.5rem 0;
+
+  .container {
+    justify-content: space-between;
+    .left {
+      width: 37.5rem;
+      h3 {
+        font-weight: normal;
+      }
+    }
+
+    .right {
+      cursor: pointer;
+      outline: 1rem solid #fff;
+      width: 57rem;
+      height: 32rem;
+      video {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// FIDELITY WEBINAR
+.fidility-webinar {
+  background-color: hsl(294, 42%, 40%);
+  color: @clr-secondry;
+  .left {
+    background-image: url("../images/registration-image.jpeg");
+    width: 565px;
+    background-size: 100%;
+  }
+  .right {
+    margin-left: 5.5rem;
+    width: 630px;
+    max-width: 100%;
+    padding: 5.1rem 0;
+    .bottom-right {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+// TAB SECTIONS
+.tab-section {
+  ul {
+    gap: 1.5rem;
+    li {
+      padding: 1.6rem;
+      cursor: pointer;
+      text-align: center;
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background-color: #758592;
+      list-style: none;
+      flex: 1;
+      position: relative;
+      &.active,
+      &:hover {
+        background-color: #28313b;
+      }
+      &.active {
+        .arrow {
+          display: block;
+        }
+      }
+      &:first-child {
+        padding-left: 15.7rem;
+        .arrow {
+          left: 38.5rem;
+        }
+      }
+      &:last-child {
+        padding-right: 15.7rem;
+        .arrow {
+          left: 26.5rem;
+        }
+      }
+      .arrow {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #2f2f2f;
+        font-size: 0;
+        line-height: 0;
+        float: left;
+        position: absolute;
+        top: 6rem;
+        display: none;
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  .community-env,
+  .financial-fundamentals {
+    .title {
+      padding-top: 5.5rem;
+      padding-bottom: 3.6rem;
+    }
+    .boxes {
+      display: flex;
+      padding-bottom: 13rem;
+      gap: 1.5rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .box {
+        background-color: #eff4f5;
+        position: relative;
+        width: 32%;
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+        .box-content {
+          padding: 0 2.5rem 8.5rem 2.5rem;
+          h5 {
+            margin: 1.6rem 0;
+          }
+          .btn-wrapper {
+            position: absolute;
+            bottom: 3rem;
+            width: calc(100% - 5rem);
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  .financial-fundamentals {
+    .boxes .box .box-content .btn-wrapper {
+      justify-content: left;
+    }
+    .money-grow {
+      padding: 7rem 0 5rem 0;
+      background-color: #dcf3ee;
+      .blocks {
+        padding-left: 3.5rem;
+        .block {
+          margin-bottom: 6rem;
+        }
+        .block-right {
+          padding-left: 3.5rem;
+        }
+      }
+    }
+  }
+}
+
+// LATINO COMMUNITY PAGE
+.latino-community {
+  background-color: #368727;
+  padding: 7.5rem 0;
+  color: @clr-secondry;
+  .top-subtitle {
+    margin-bottom: 6rem;
+  }
+  .bottom-subtitle {
+    margin-top: 7.5rem;
+  }
+  .boxes {
+    color: @clr-primary;
+    gap: 4rem;
+    .box {
+      background-color: #f8f9e5;
+      padding: 4.5rem 0;
+      padding-left: 4.1rem;
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+      .box-content {
+        padding-right: 20rem;
+      }
+      .btn-wrapper {
+        margin-top: 6rem;
+      }
+      p {
+        padding-right: 3rem;
+      }
+      a {
+        width: 14rem;
+      }
+    }
+    .box.box-start .box-content {
+      padding-right: 22rem;
+    }
+    .box-login {
+      background-image: url("../images/action-img-1.jpeg");
+    }
+    .box-start {
+      background-image: url("../images/action-img-2.jpeg");
+    }
+  }
+  .bottom {
+    margin-top: 1.2rem;
+    p {
+      width: 63rem;
+      max-width: 100%;
+      padding-right: 5rem;
+    }
+  }
+}
+
+// FOOTER SECTION START
+footer {
+  padding: 8.2rem 0;
+  text-align: center;
+  color: #758592;
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    img {
+      width: 213px;
+    }
+  }
+  .copyright {
+    p {
+      margin: 0;
+      font-size: @font-size-xs;
+    }
+  }
+}

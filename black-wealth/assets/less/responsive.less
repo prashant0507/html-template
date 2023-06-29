@@ -1,0 +1,42 @@
+/* For Mobile Portrait View */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-width: 640px) and (orientation: landscape) {
+}
+
+/* For Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    @common-pl:2rem;
+
+    :root {
+        font-size: 51.5%;
+    }
+
+    header {
+        a {
+            justify-content: center;
+        }
+    }
+
+    .top-banner {
+        .container-expand {
+            background-size: 52% auto; 
+            .left {
+                padding-left: @common-pl;
+                padding-top: 5rem;
+                padding-bottom: 4.3rem;
+            }
+        }
+    }
+
+    .container {
+        padding: 0 2rem;
+        box-sizing: border-box;
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-width: 640px) {
+}

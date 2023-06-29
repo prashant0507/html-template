@@ -1,4 +1,24 @@
 /* For Mobile Portrait View */
 /* For Mobile Landscape View */
 /* For Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    font-size: 51.5%;
+  }
+  header a {
+    justify-content: center;
+  }
+  .top-banner .container-expand {
+    background-size: 52% auto;
+  }
+  .top-banner .container-expand .left {
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 4.3rem;
+  }
+  .container {
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+}
 /* For Mobile Phones Portrait or Landscape View */

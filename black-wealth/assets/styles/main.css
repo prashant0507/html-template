@@ -112,10 +112,10 @@ header img {
   height: inherit;
 }
 .top-banner .container-expand .left {
-  width: 430px;
+  width: 43rem;
   max-width: 100%;
-  padding-top: 120px;
-  padding-bottom: 129px;
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
 }
 .top-banner .container-expand .left h1 {
   margin: 0;
@@ -155,8 +155,8 @@ header img {
 .financial-support .container .right {
   cursor: pointer;
   outline: 1rem solid #fff;
-  width: 570px;
-  height: 322px;
+  width: 57rem;
+  height: 32rem;
 }
 .financial-support .container .right video {
   width: 100%;

@@ -353,8 +353,7 @@ header img {
 }
 .latino-community .boxes .box {
   background-color: #f8f9e5;
-  padding: 4.5rem 0;
-  padding-left: 4.1rem;
+  padding: 4.5rem 0 10rem 4.1rem;
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
@@ -365,7 +364,7 @@ header img {
 }
 .latino-community .boxes .box .btn-wrapper {
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
 }
 .latino-community .boxes .box p {
   padding-right: 3rem;

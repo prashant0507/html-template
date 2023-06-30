@@ -254,6 +254,9 @@
   .latino-community .boxes .box .box-content {
     padding-right: 23rem;
   }
+  .latino-community .boxes .box .box-content .btn-wrapper {
+    bottom: 2rem;
+  }
   .latino-community .boxes .box .box-content h5 {
     font-size: 1.8rem;
   }

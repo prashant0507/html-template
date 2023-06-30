@@ -1,5 +1,4 @@
-/**--- FONT SIZE ---*/
-/**--- FONT COLOR ---*/
+/**--- ROOT SECTION ---*/
 :root {
   font-size: 62.5%;
 }
@@ -8,6 +7,7 @@ body {
   font-family: "Fidelity Sans", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
 }
+/**--- LAYOUT SECTION ---*/
 .container-fluid {
   max-width: 100%;
 }
@@ -15,6 +15,7 @@ body {
   width: 1100px;
   margin: 0 auto;
   max-width: 100%;
+  padding: 0 2rem;
 }
 .container-expand {
   width: 1400px;
@@ -45,6 +46,7 @@ body {
 .p-0 {
   padding: 0;
 }
+/**--- FONTS SECTION ---*/
 p {
   font-size: 1.8rem;
 }
@@ -66,6 +68,13 @@ h6 {
 sup {
   font-size: 1.5rem;
 }
+.text-uppercase {
+  text-transform: uppercase;
+}
+.font-normal {
+  font-weight: normal;
+}
+/**--- BUTTON SECTION ---*/
 .btn {
   padding: 1.2rem 3.1rem;
   text-align: center;
@@ -88,12 +97,7 @@ sup {
 .btn-primary:hover {
   background-color: #2b6f21;
 }
-.text-uppercase {
-  text-transform: uppercase;
-}
-.font-normal {
-  font-weight: normal;
-}
+/**--- HEADER SECTION START ---*/
 header {
   padding: 20px;
   max-height: 60px;
@@ -102,6 +106,7 @@ header {
 header img {
   width: 123px;
 }
+/**--- TOP BANNER SECTION START ---*/
 .top-banner {
   background-color: #f1f4cb;
 }
@@ -110,16 +115,18 @@ header img {
   background-repeat: no-repeat;
   background-position: right;
   height: inherit;
+  background-size: 52.8%;
 }
 .top-banner .container-expand .left {
   width: 43rem;
   max-width: 100%;
-  padding-top: 12.5rem;
-  padding-bottom: 12.5rem;
+  padding-top: 9.5rem;
+  padding-bottom: 9.3rem;
 }
 .top-banner .container-expand .left h1 {
   margin: 0;
 }
+/**--- COMMUNITY UPDATE SECTION START ---*/
 .community-update {
   background-color: #009681;
   padding: 5.5rem 0;
@@ -139,6 +146,7 @@ header img {
 .community-update .bottom-left a.btn {
   color: black;
 }
+/**--- FINANCIAL SUPPORT SECTION START ---*/
 .financial-support {
   background-color: #c4e5b7;
   padding: 6.5rem 0;
@@ -148,19 +156,20 @@ header img {
 }
 .financial-support .container .left {
   width: 37.5rem;
+  padding-right: 4rem;
 }
 .financial-support .container .left h3 {
   font-weight: normal;
 }
 .financial-support .container .right {
   cursor: pointer;
-  outline: 1rem solid #fff;
   width: 57rem;
-  height: 32rem;
 }
 .financial-support .container .right video {
-  width: 100%;
+  width: 98%;
+  outline: 1rem solid #fff;
 }
+/**--- FIDELITY WEBINAR SECTION START ---*/
 .fidility-webinar {
   background-color: hsl(294, 42%, 40%);
   color: white;
@@ -180,6 +189,10 @@ header img {
 .fidility-webinar .right .bottom-right {
   justify-content: space-between;
   align-items: center;
+}
+/**--- TAB SECTION START ---*/
+.tab-section .v-duration {
+  color: #005670;
 }
 .tab-section ul {
   gap: 1.5rem;
@@ -276,6 +289,7 @@ header img {
 }
 .tab-section .financial-fundamentals .boxes .box .box-content .btn-wrapper {
   justify-content: left;
+  width: auto;
 }
 .tab-section .financial-fundamentals .money-grow {
   padding: 7rem 0 5rem 0;
@@ -290,6 +304,38 @@ header img {
 .tab-section .financial-fundamentals .money-grow .blocks .block-right {
   padding-left: 3.5rem;
 }
+.tab-section .video-box {
+  background-color: #eff4f5;
+  height: 39.3rem;
+  overflow: hidden;
+}
+.tab-section .video-box .video-left {
+  width: 60%;
+}
+.tab-section .video-box .video-right {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  box-sizing: border-box;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+.tab-section .video-box .video-right .video-list {
+  width: 42%;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.tab-section .video-box .video-right .video-list.active img {
+  outline: 0.8rem solid #50c2ac;
+  outline-offset: -0.8rem;
+}
+.tab-section .video-box .video-right .video-list img {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+/**--- LATINO COMMUNITY SECTION START ---*/
 .latino-community {
   background-color: #368727;
   padding: 7.5rem 0;
@@ -312,12 +358,14 @@ header img {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
+  position: relative;
 }
 .latino-community .boxes .box .box-content {
   padding-right: 20rem;
 }
 .latino-community .boxes .box .btn-wrapper {
-  margin-top: 6rem;
+  position: absolute;
+  bottom: 2rem;
 }
 .latino-community .boxes .box p {
   padding-right: 3rem;
@@ -342,6 +390,7 @@ header img {
   max-width: 100%;
   padding-right: 5rem;
 }
+/**--- FOOTER SECTION START ---*/
 footer {
   padding: 8.2rem 0;
   text-align: center;

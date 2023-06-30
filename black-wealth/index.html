@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Black Wealth</title>
-    <link
-      rel="stylesheet/less"
-      type="text/css"
-      href="./assets/styles/main.css"
-    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="./assets/styles/responsive.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/less"></script> -->
   </head>
   <body>
     <!-- HEADER SECTION START -->
     <header class="container-fluid">
-      <div class="container-expand">
+      <div class="container">
         <a href="#" class="d-flex">
           <img src="./assets/images/fidelity-logo.svg" alt="Fidility" />
         </a>
@@ -67,7 +63,7 @@
             when the next round of applications opens,
             <a href="#">contact us</a>
           </p>
-          <a href="void:()" class="btn btn-secondry">Learn More</a>
+          <a href="javascript:void(0)" class="btn btn-secondry">Learn More</a>
         </div>
       </div>
     </div>
@@ -88,7 +84,7 @@
             Video length 3:58
           </p>
           <div class="d-flex">
-            <a href="void:()" class="btn btn-secondry">Watch the video</a>
+            <a href="javascript:void(0)" class="btn btn-secondry">Watch the video</a>
           </div>
         </div>
 
@@ -126,7 +122,7 @@
           </div>
           <div class="bottom-right d-flex">
             <h6 class="m-0">Now available on demand</h6>
-            <a href="void:()" class="btn btn-secondry">Watch Now</a>
+            <a href="javascript:void(0)" class="btn btn-secondry">Watch Now</a>
           </div>
         </div>
       </div>
@@ -161,15 +157,71 @@
         <div class="container">
           <div class="video-section">
             <h3 class="m-0 font-normal title">
-              See what we're up to in the community, and find insights, events,
-              and initiatives that can help build success.
+              These resources can help you manage your money, plan for the
+              future, and build wealth that you can pass on.
             </h3>
-            <h5 class="mt-0 font-normal">Read more for deeper insights</h5>
-          </div>
+            <h5 class="mt-0 font-normal tips">Watch for more money tips</h5>
+            <div class="video-box d-flex">
+              <div class="video-left">
+                <video
+                  poster="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
+                  controls
+                >
+                  <source
+                    src="https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/215/595/44802_Jamilla_Voices_Invest_in_Future_You_1.22_MPX_16x9.mp4"
+                  />
+                </video>
+              </div>
+              <div id="vr" class="video-right">
+                <div class="video-list vl1 active" onclick="activeVideo(event)">
+                  <div class="thumbnail">
+                    <img
+                      src="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
+                    />
+                  </div>
+                  <div class="v-title">Invest in future you</div>
+                  <div class="v-duration">1:18</div>
+                </div>
 
+                <div class="video-list vl2" onclick="activeVideo(event)">
+                  <div class="thumbnail">
+                    <img
+                      src="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
+                    />
+                  </div>
+                  <div class="v-title">Balancing your spending</div>
+                  <div class="v-duration">1:13</div>
+                </div>
+
+                <div class="video-list vl3" onclick="activeVideo(event)">
+                  <div class="thumbnail">
+                    <img
+                      src="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
+                    />
+                  </div>
+                  <div class="v-title">Family and finances</div>
+                  <div class="v-duration">7:30</div>
+                </div>
+
+                <div class="video-list vl4" onclick="activeVideo(event)">
+                  <div class="thumbnail">
+                    <img
+                      src="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
+                    />
+                  </div>
+                  <div class="v-title">Compounding savings, not problems</div>
+                  <div class="v-duration">0:44</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="main-video-duration">Invest in future you <span class="v-duration">1:18</span></p>
+          <h5 class="font-normal">Read more for deeper insights</h5>
           <div class="boxes">
             <div class="box">
-              <img src="./assets/images/card-img-1.jpeg" />
+              <div class="box-img box-img1">
+                <img src="./assets/images/card-img-1.jpeg" />
+              </div>
               <div class="box-content">
                 <h5 class="font-normal">5 steps closer to financial freedom</h5>
                 <p class="">
@@ -178,14 +230,16 @@
                   your savings.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Read the article</a
                   >
                 </div>
               </div>
             </div>
             <div class="box">
-              <img src="./assets/images/card-img-2.jpeg" />
+              <div class="box-img box-img2">
+                <img src="./assets/images/card-img-2.jpeg" />
+              </div>
               <div class="box-content">
                 <h5 class="font-normal">7 steps to learn how to budget</h5>
                 <p class="">
@@ -193,14 +247,16 @@
                   tool that's right for you, track your money, and set goals.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Read the article</a
                   >
                 </div>
               </div>
             </div>
             <div class="box">
-              <img src="./assets/images/card-img-3.jpeg" />
+              <div class="box-img box-img3">
+                <img src="./assets/images/card-img-3.jpeg" />
+              </div>
               <div class="box-content">
                 <h5 class="font-normal">Considering college costs</h5>
                 <p class="">
@@ -209,7 +265,7 @@
                   your money will have to potentially grow.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Read the article</a
                   >
                 </div>
@@ -234,7 +290,7 @@
                     can lead to big savings over time.
                   </p>
                   <div class="d-flex">
-                    <a href="void:()" class="btn btn-primary"
+                    <a href="javascript:void(0)" class="btn btn-primary"
                       >Check out the tool</a
                     >
                   </div>
@@ -252,7 +308,7 @@
                     can lead to big savings over time.
                   </p>
                   <div class="d-flex">
-                    <a href="void:()" class="btn btn-primary"
+                    <a href="javascript:void(0)" class="btn btn-primary"
                       >Check out the tool</a
                     >
                   </div>
@@ -282,7 +338,7 @@
                   mobility, and build generational wealth.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Learn More</a
                   >
                 </div>
@@ -297,7 +353,7 @@
                   employees of all backgrounds.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Learn More</a
                   >
                 </div>
@@ -313,7 +369,7 @@
                   talent.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Learn More</a
                   >
                 </div>
@@ -330,7 +386,7 @@
                   mobility, and build generational wealth.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Learn More</a
                   >
                 </div>
@@ -345,7 +401,7 @@
                   employees of all backgrounds.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Learn More</a
                   >
                 </div>
@@ -361,7 +417,7 @@
                   talent.
                 </p>
                 <div class="btn-wrapper">
-                  <a href="void:()" class="btn btn-primary d-block"
+                  <a href="javascript:void(0)" class="btn btn-primary d-block"
                     >Learn More</a
                   >
                 </div>
@@ -393,7 +449,7 @@
                 also find support, help, and information.
               </p>
               <div class="btn-wrapper">
-                <a href="void:()" class="btn btn-primary d-block">Log In</a>
+                <a href="javascript:void(0)" class="btn btn-primary d-block">Log In</a>
               </div>
             </div>
           </div>
@@ -407,7 +463,7 @@
                 money, build personal wealth, and prepare for your future.
               </p>
               <div class="btn-wrapper">
-                <a href="void:()" class="btn btn-primary d-block"
+                <a href="javascript:void(0)" class="btn btn-primary d-block"
                   >Get Started</a
                 >
               </div>
@@ -422,7 +478,7 @@
             you manage your money and reach the goals you set para ti y tu
             familia.
           </p>
-          <a href="void:()" class="btn btn-secondry">Go Now</a>
+          <a href="javascript:void(0)" class="btn btn-secondry">Go Now</a>
         </div>
       </div>
     </div>
@@ -432,7 +488,7 @@
     <footer class="container-fluid">
       <div class="container">
         <div class="logo">
-          <a href="void:()"
+          <a href="javascript:void(0)"
             ><img
               src="./assets/images/fidelity-investments-logo.svg"
               alt="fidelity logo"
@@ -449,7 +505,7 @@
           </p>
           <p>
             Fidelity Brokerage Services LLC, Member NYSE,
-            <a href="void:()">SIPC</a>, opens in new window, 900 Salem Street,
+            <a href="javascript:void(0)">SIPC</a>, opens in new window, 900 Salem Street,
             Smithfield, RI 02917
           </p>
           <p>© 2023 FMR LLC. All rights reserved.</p>

@@ -11,14 +11,14 @@
       type="text/css"
       href="./assets/styles/responsive.css"
     />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/less"></script> -->
   </head>
-  <body>
+  <body onload="onLoad()">
     <!-- HEADER SECTION START -->
     <header class="container-fluid">
       <div class="container">
-        <a href="#" class="d-flex">
+        <a href="#" class="d-flex" aria-label="Fidility Net Benefits">
           <img src="./assets/images/fidelity-logo.svg" alt="Fidility" />
+          <span class="sr-only">, opens in new window</span>
         </a>
       </div>
     </header>
@@ -63,7 +63,14 @@
             when the next round of applications opens,
             <a href="#">contact us</a>
           </p>
-          <a href="javascript:void(0)" class="btn btn-secondry">Learn More</a>
+          <a
+            href="javascript:void(0)"
+            aria-label="Community Update-Learn More"
+            class="btn btn-secondry"
+          >
+            Learn More
+            <span class="sr-only">, opens in new window</span>
+          </a>
         </div>
       </div>
     </div>
@@ -84,7 +91,14 @@
             Video length 3:58
           </p>
           <div class="d-flex">
-            <a href="javascript:void(0)" class="btn btn-secondry">Watch the video</a>
+            <a
+              href="javascript:void(0)"
+              aria-label="watch the video"
+              class="btn btn-secondry"
+            >
+              Watch the video
+              <span class="sr-only">, opens in new window</span>
+            </a>
           </div>
         </div>
 
@@ -122,7 +136,14 @@
           </div>
           <div class="bottom-right d-flex">
             <h6 class="m-0">Now available on demand</h6>
-            <a href="javascript:void(0)" class="btn btn-secondry">Watch Now</a>
+            <a
+              href="javascript:void(0)"
+              aria-label="Get a reminder"
+              class="btn btn-secondry"
+            >
+              Watch Now
+              <span class="sr-only">, opens in new window</span>
+            </a>
           </div>
         </div>
       </div>
@@ -137,6 +158,8 @@
             id="tab1"
             class="tab active"
             onclick="activateTab(event,'tab-content1')"
+            role="tab"
+            tabindex="0"
           >
             Financial fundamentals
             <span class="arrow"></span>
@@ -145,6 +168,8 @@
             id="tab2"
             class="tab"
             onclick="activateTab(event, 'tab-content2')"
+            role="tab"
+            tabindex="0"
           >
             Community empowerment
             <span class="arrow"></span>
@@ -161,6 +186,7 @@
               future, and build wealth that you can pass on.
             </h3>
             <h5 class="mt-0 font-normal tips">Watch for more money tips</h5>
+
             <div class="video-box d-flex">
               <div class="video-left">
                 <video
@@ -168,152 +194,32 @@
                   controls
                 >
                   <source
+                    id="vl-container"
                     src="https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/215/595/44802_Jamilla_Voices_Invest_in_Future_You_1.22_MPX_16x9.mp4"
                   />
                 </video>
               </div>
-              <div id="vr" class="video-right">
-                <div class="video-list vl1 active" onclick="activeVideo(event)">
-                  <div class="thumbnail">
-                    <img
-                      src="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
-                    />
-                  </div>
-                  <div class="v-title">Invest in future you</div>
-                  <div class="v-duration">1:18</div>
-                </div>
-
-                <div class="video-list vl2" onclick="activeVideo(event)">
-                  <div class="thumbnail">
-                    <img
-                      src="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
-                    />
-                  </div>
-                  <div class="v-title">Balancing your spending</div>
-                  <div class="v-duration">1:13</div>
-                </div>
-
-                <div class="video-list vl3" onclick="activeVideo(event)">
-                  <div class="thumbnail">
-                    <img
-                      src="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
-                    />
-                  </div>
-                  <div class="v-title">Family and finances</div>
-                  <div class="v-duration">7:30</div>
-                </div>
-
-                <div class="video-list vl4" onclick="activeVideo(event)">
-                  <div class="thumbnail">
-                    <img
-                      src="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
-                    />
-                  </div>
-                  <div class="v-title">Compounding savings, not problems</div>
-                  <div class="v-duration">0:44</div>
-                </div>
+              <div id="append-money-tips" class="video-right">
+                <!-- HTML WILL APPEND USING JS -->
               </div>
             </div>
           </div>
-          <p class="main-video-duration">Invest in future you <span class="v-duration">1:18</span></p>
+
+          <p class="main-video-duration">
+            Invest in future you <span class="v-duration">1:18</span>
+          </p>
+
           <h5 class="font-normal">Read more for deeper insights</h5>
-          <div class="boxes">
-            <div class="box">
-              <div class="box-img box-img1">
-                <img src="./assets/images/card-img-1.jpeg" />
-              </div>
-              <div class="box-content">
-                <h5 class="font-normal">5 steps closer to financial freedom</h5>
-                <p class="">
-                  Get peace of mind with a personal financial plan. Gradual
-                  increases—even just an additional 1% each year—can help boost
-                  your savings.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Read the article</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <div class="box-img box-img2">
-                <img src="./assets/images/card-img-2.jpeg" />
-              </div>
-              <div class="box-content">
-                <h5 class="font-normal">7 steps to learn how to budget</h5>
-                <p class="">
-                  See how tracking expenses can help you save more. Pick the
-                  tool that's right for you, track your money, and set goals.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Read the article</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <div class="box-img box-img3">
-                <img src="./assets/images/card-img-3.jpeg" />
-              </div>
-              <div class="box-content">
-                <h5 class="font-normal">Considering college costs</h5>
-                <p class="">
-                  Learn how understanding the price of college can help you make
-                  better decisions. The earlier you start saving, the more time
-                  your money will have to potentially grow.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Read the article</a
-                  >
-                </div>
-              </div>
-            </div>
+          <div id="append-deeper-insigths" class="boxes">
+            <!-- HTML WILL APPEND USING JS -->
           </div>
         </div>
 
         <div class="money-grow">
           <div class="container">
             <h5 class="mt-0 font-normal">See how your money can grow</h5>
-            <div class="blocks">
-              <div class="block top-block d-flex">
-                <div class="block-left">
-                  <img src="./assets/images/power-compounding-image.png" />
-                </div>
-                <div class="block-right">
-                  <h5 class="font-normal mb-0">The Power of Small Amounts</h5>
-                  <p>
-                    When it comes to saving and investing, it doesn't take much
-                    to get started. Use this tool to see how even a small amount
-                    can lead to big savings over time.
-                  </p>
-                  <div class="d-flex">
-                    <a href="javascript:void(0)" class="btn btn-primary"
-                      >Check out the tool</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="block bottom-block d-flex">
-                <div class="block-left">
-                  <img src="./assets/images/budget-tool-image.png" />
-                </div>
-                <div class="block-right">
-                  <h5 class="font-normal mb-0">The Power of Small Amounts</h5>
-                  <p>
-                    When it comes to saving and investing, it doesn't take much
-                    to get started. Use this tool to see how even a small amount
-                    can lead to big savings over time.
-                  </p>
-                  <div class="d-flex">
-                    <a href="javascript:void(0)" class="btn btn-primary"
-                      >Check out the tool</a
-                    >
-                  </div>
-                </div>
-              </div>
+            <div id="append-money-grow" class="blocks">
+              <!-- HTML WILL APPEND USING JS -->
             </div>
           </div>
         </div>
@@ -326,107 +232,11 @@
             See what we're up to in the community, and find insights, events,
             and initiatives that can help build success.
           </h3>
-          <div class="boxes">
-            <div class="box">
-              <img src="./assets/images/card-img-9.jpeg" />
-              <div class="box-content">
-                <h5>Invest in My Education (ME)<sup>SM</sup></h5>
-                <p class="">
-                  Fidelity is rolling out a $250 million program to help
-                  students from Black, Latino, and other historically
-                  underserved communities pay for college, improve economic
-                  mobility, and build generational wealth.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <img src="./assets/images/card-img-10.jpeg" />
-              <div class="box-content">
-                <h5>Creating a Diverse and Inclusive Workplace</h5>
-                <p class="">
-                  We’re building a workforce that celebrates and elevates
-                  employees of all backgrounds.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <img src="./assets/images/card-img-4.jpeg" />
-              <div class="box-content">
-                <h5>Black Men XCEL Summit</h5>
-                <p class="">
-                  We’re committed to being a pillar in the Black community for
-                  financial education, wealth building, and attracting top
-                  talent.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <img src="./assets/images/card-img-5.jpeg" />
-              <div class="box-content">
-                <h5>Invest in My Education (ME)<sup>SM</sup></h5>
-                <p class="">
-                  Fidelity is rolling out a $250 million program to help
-                  students from Black, Latino, and other historically
-                  underserved communities pay for college, improve economic
-                  mobility, and build generational wealth.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <img src="./assets/images/card-img-8.jpeg" />
-              <div class="box-content">
-                <h5>Creating a Diverse and Inclusive Workplace</h5>
-                <p class="">
-                  We’re building a workforce that celebrates and elevates
-                  employees of all backgrounds.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="box">
-              <img src="./assets/images/card-img-7.jpeg" />
-              <div class="box-content">
-                <h5>Black Men XCEL Summit</h5>
-                <p class="">
-                  We’re committed to being a pillar in the Black community for
-                  financial education, wealth building, and attracting top
-                  talent.
-                </p>
-                <div class="btn-wrapper">
-                  <a href="javascript:void(0)" class="btn btn-primary d-block"
-                    >Learn More</a
-                  >
-                </div>
-              </div>
-            </div>
+          <div id="append-community-env" class="boxes">
+            <!-- HTML WILL APPEND USING JS -->
           </div>
         </div>
       </div>
-      <!-- </div> -->
     </div>
     <!-- TAB SECTION END -->
 
@@ -437,38 +247,8 @@
           Ready to take action? Get more help managing your money.
         </h3>
 
-        <div class="boxes d-flex">
-          <div class="box box-login">
-            <div class="box-content">
-              <h5 class="m-0 font-normal">
-                Do you have a Fidelity benefits account offered by your
-                employer?
-              </h5>
-              <p>
-                Access your 401(k), 403(b), and other savings accounts. You can
-                also find support, help, and information.
-              </p>
-              <div class="btn-wrapper">
-                <a href="javascript:void(0)" class="btn btn-primary d-block">Log In</a>
-              </div>
-            </div>
-          </div>
-          <div class="box box-start">
-            <div class="box-content">
-              <h5 class="m-0 font-normal">
-                Looking to learn more about budgeting, saving, and investing?
-              </h5>
-              <p>
-                Find a range of resources to help you make the most of your
-                money, build personal wealth, and prepare for your future.
-              </p>
-              <div class="btn-wrapper">
-                <a href="javascript:void(0)" class="btn btn-primary d-block"
-                  >Get Started</a
-                >
-              </div>
-            </div>
-          </div>
+        <div id="append-community-boxes" class="boxes d-flex">
+          <!-- HTML WILL APPEND USING JS -->
         </div>
 
         <h3 class="bottom-subtitle mb-0">Visit the Latino Community Page</h3>
@@ -478,7 +258,14 @@
             you manage your money and reach the goals you set para ti y tu
             familia.
           </p>
-          <a href="javascript:void(0)" class="btn btn-secondry">Go Now</a>
+          <a
+            href="javascript:void(0)"
+            area-label="LatinoCommunity Page-Go Now"
+            class="btn btn-secondry"
+          >
+            Go Now
+            <span class="sr-only">, opens in new window</span>
+          </a>
         </div>
       </div>
     </div>
@@ -488,11 +275,13 @@
     <footer class="container-fluid">
       <div class="container">
         <div class="logo">
-          <a href="javascript:void(0)"
-            ><img
+          <a href="javascript:void(0)">
+            <img
               src="./assets/images/fidelity-investments-logo.svg"
               alt="fidelity logo"
-          /></a>
+            />
+            <span class="sr-only">, opens in new window</span>
+          </a>
         </div>
         <p class="mb-0">
           <b>Investing involves risk, including risk of loss.</b>
@@ -505,8 +294,10 @@
           </p>
           <p>
             Fidelity Brokerage Services LLC, Member NYSE,
-            <a href="javascript:void(0)">SIPC</a>, opens in new window, 900 Salem Street,
-            Smithfield, RI 02917
+            <a href="javascript:void(0)" area-label="sipc">
+              SIPC
+              <span class="sr-only">, opens in new window</span> </a
+            >, Salem Street, Smithfield, RI 02917
           </p>
           <p>© 2023 FMR LLC. All rights reserved.</p>
           <p>1065607.8.0</p>

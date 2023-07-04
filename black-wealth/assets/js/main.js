@@ -1,9 +1,45 @@
+const FINANCE_VIDEO_URL =
+  "https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/104/991/QFCM4762000H_45855_PI_Joiya_Mitchell_Fuel_to_Create_Change_3m58s_Fidcom_16x9_NC_(1).mp4";
+const FINANCE_POSTER_URL = "./assets/images/Joiya_Poster_Image_704x396.png";
+
+const WEBINAR_VIDEO_URL =
+  "https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/890/330/BHM_021623_v2.mp4";
+const WEBINAR_POSTER_URL =
+  "https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/890/330/44802-29-SScreenshot-4_15-1280x720.png";
+
+/**
+ * Device width and resize
+ */
+let deviceWidth = window.innerWidth;
+isOverlay = false;
+if (deviceWidth > 1150) {
+  isOverlay = false;
+} else {
+  isOverlay = true;
+}
+window.addEventListener("resize", event => {
+  deviceWidth = window.innerWidth;
+  if (deviceWidth > 1150) {
+    isOverlay = false;
+    financialVideo();
+  } else {
+    isOverlay = true;
+    resetAllVideo();
+  }
+});
+
+/**
+ * WINDOW ONLOAD
+ */
 const onLoad = () => {
   loadMoneyTipsSection();
   loaddeeperInsightsSection();
   loadMoneyGrowSection();
   loadCommunityPage();
   loadCommunityEmpowermentSection();
+  financialVideo();
+  webinarVideo();
+  closeOverlay();
 };
 
 const loadCommunityPage = () => {
@@ -275,13 +311,26 @@ const loadMoneyTipsSection = () => {
     }
   ];
 
-  tipsSection.forEach(elem => {
+  tipsSection.forEach((elem, index) => {
     data += `
-        <div class="video-list ${elem.boxClass}" onclick="activeVideo(event)">
+        <div class="video-list ${elem.boxClass}" onclick="activeVideo('${elem.duration}', event, '${elem.path}')">
           <div class="thumbnail">
+            <div class="thumbnail-img">
             <img
               src="${elem.image}" alt="Intro video placeholder"
             />
+            </div>
+            <img
+            id="tip-${index}-button"
+            class="tip-play-button"
+            src="./assets/images/video-play-button.png"
+            width="45"
+            height="45"
+            role="button"
+            alt="play button"
+            aria-label="play button"
+            tabindex="0"
+          />
           </div>
           <div class="v-title">${elem.title}</div>
           <div class="v-duration">${elem.duration}</div>
@@ -290,8 +339,17 @@ const loadMoneyTipsSection = () => {
   });
 
   document.getElementById("append-money-tips").innerHTML = data;
+
+  /**Left side video play button */
+  let btn = document.getElementById("left-video-play-btn");
+  btn.addEventListener("click", function() {
+    btn.style.display = "none";
+    let elem = document.getElementById("video-tips");
+    elem.play();
+  });
 };
 
+/** Tab Section */
 const activateTab = (e, id) => {
   document.getElementById("tab1").classList.remove("active");
   document.getElementById("tab2").classList.remove("active");
@@ -302,7 +360,8 @@ const activateTab = (e, id) => {
   document.getElementById(id).classList.add("active");
 };
 
-const activeVideo = e => {
+/** Watch for more money tips */
+const activeVideo = (duration, e, videoPath) => {
   const btnContainer = document.getElementById("append-money-tips");
   const btns = btnContainer.getElementsByClassName("active");
   for (var i = 0; i < btns.length; i++) {
@@ -310,4 +369,108 @@ const activeVideo = e => {
     current[0].className = current[0].className.replace("active", "");
   }
   e.currentTarget.classList.add("active");
+  if (!isOverlay) {
+    let btn = document.getElementById("left-video-play-btn");
+    btn.style.display = "none";
+
+    document.getElementById("left-video-duration").innerHTML = duration;
+
+    let elem = document.getElementById("video-tips");
+    elem.src = videoPath;
+    elem.currentTime = 0;
+    elem.play();
+  } else {
+    enabledOverlay(videoPath, "");
+  }
+};
+
+/** Financial video */
+const financialVideo = () => {
+  const videoPlayer = document.getElementById("watch-video");
+  const element = document.getElementById("watch-video-btn");
+  const element2 = document.getElementById("play-watch-now");
+
+  // let duration = millisToMinutesAndSeconds(videoPlayer.duration);
+  // document.getElementById("watch-video-duration").innerHTML = duration;
+
+  // Action on Watch Now button
+  element.addEventListener("click", function() {
+    if (!isOverlay) {
+      videoPlayer.currentTime = 0;
+      videoPlayer.play();
+      element2.style.display = "none";
+    } else {
+      enabledOverlay(FINANCE_VIDEO_URL, FINANCE_POSTER_URL);
+    }
+  });
+
+  // Action on Play button
+  element2.addEventListener("click", function() {
+    if (!isOverlay) {
+      videoPlayer.play();
+      element2.style.display = "none";
+    } else {
+      enabledOverlay(FINANCE_VIDEO_URL, FINANCE_POSTER_URL);
+    }
+  });
+};
+
+/** Webinar video */
+const webinarVideo = () => {
+  const element = document.getElementById("webinar-video-btn");
+  element.addEventListener("click", function() {
+    /**Pause tips video when webinar video is started */
+    let vt = document.getElementById("video-tips");
+    vt.pause();
+
+    /**Pause financial video when webinar video is started */
+    const fv = document.getElementById("watch-video");
+    fv.pause();
+
+    enabledOverlay(WEBINAR_VIDEO_URL, WEBINAR_POSTER_URL);
+  });
+};
+
+/** Convert miliseconds to minute and seconds */
+const millisToMinutesAndSeconds = millis => {
+  let minutes = parseInt(millis / 60, 10);
+  let seconds = millis % 60;
+  return minutes + ":" + seconds.toString().split(".")[0];
+};
+
+/** Enable overlay modal small device */
+const enabledOverlay = (videoPath, posterPath) => {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("lightbox").style.display = "block";
+  let elem = document.getElementById("overlay-video");
+  elem.src = videoPath;
+  elem.poster = posterPath;
+  elem.play();
+};
+
+/** Close overlay modal */
+const closeOverlay = () => {
+  let elem = document.getElementById("vid-close");
+  elem.addEventListener("click", function() {
+    resetOverlay();
+  });
+};
+
+const resetOverlay = () => {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("lightbox").style.display = "none";
+  let elem = document.getElementById("overlay-video");
+  elem.src = "";
+  elem.poster = "";
+};
+
+/** Reset all video when we changes screen size */
+const resetAllVideo = () => {
+  /**Reset tips video when webinar video is started */
+  let vt = document.getElementById("video-tips");
+  vt.load();
+
+  /**Reset financial video when webinar video is started */
+  const fv = document.getElementById("watch-video");
+  fv.load();
 };

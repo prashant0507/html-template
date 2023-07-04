@@ -11,14 +11,68 @@ body {
   font-size: 1.6rem; // (10*1.6 = 16px)
 }
 
+#overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  #lightbox {
+    width: 90%;
+    max-width: 127rem;
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9000;
+    video {
+      width: 100%;
+    }
+    #vid-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: #968f8f;
+      border-radius: 50%;
+      background-color: #fff;
+      font-size: 4.8rem;
+      font-weight: 700;
+      border: 0;
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+      display: block;
+      overflow: hidden;
+      z-index: 30;
+      span {
+        border: 0;
+        width: 60%;
+        height: 0.3rem;
+        background-color: #494c4d;
+        display: block;
+        border-radius: 2.5rem;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      span:last-of-type {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+}
+
 /**--- SCREEN READER SECTION ---*/
 .sr-only {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /**--- LAYOUT SECTION ---*/
@@ -84,6 +138,10 @@ h1 {
   font-size: @font-size-h1;
 }
 
+h2 {
+  font-size: @font-size-h2;
+}
+
 h3 {
   font-size: @font-size-h3;
 }
@@ -110,7 +168,7 @@ sup {
 
 /**--- BUTTON SECTION ---*/
 .btn {
-  padding: 1.2rem 3.1rem;
+  padding: 1.2rem 0;
   text-align: center;
   cursor: pointer;
   border-radius: 1rem;
@@ -121,11 +179,15 @@ sup {
 .btn-secondry {
   background-color: #fff;
   color: #000;
+  width: 19rem;
+  box-sizing: border-box;
 }
 
 .btn-primary {
   background-color: #368727;
   color: white;
+  width: 19rem;
+  box-sizing: border-box;
 }
 
 .btn.btn-secondry:hover {
@@ -144,6 +206,11 @@ header {
   img {
     width: 123px;
   }
+  .container-full {
+    margin: 0 auto;
+    width: 1400px;
+    max-width: 100%;
+  }
 }
 
 /**--- TOP BANNER SECTION START ---*/
@@ -158,8 +225,10 @@ header {
     .left {
       width: 43rem;
       max-width: 100%;
-      padding-top: 9.5rem;
+      padding-top: 12.5rem;
       padding-bottom: 9.3rem;
+      height: 550px;
+      box-sizing: border-box;
       h1 {
         margin: 0;
       }
@@ -172,6 +241,11 @@ header {
   background-color: #009681;
   padding: 5.5rem 0;
   color: @clr-secondry;
+  .top-left {
+    .subtitle {
+      font-size: 1.6rem;
+    }
+  }
   .bottom-left {
     display: flex;
     justify-content: space-between;
@@ -196,7 +270,7 @@ header {
   .container {
     justify-content: space-between;
     .left {
-      width: 37.5rem;
+      width: 36.5rem;
       padding-right: 4rem;
       h3 {
         font-weight: normal;
@@ -206,10 +280,19 @@ header {
     .right {
       cursor: pointer;
       width: 57rem;
-      // height: 32rem;
+      position: relative;
       video {
         width: 98%;
         outline: 1rem solid #fff;
+      }
+      img {
+        position: absolute;
+        left: 22.5rem;
+        top: 10rem;
+        &:hover {
+          transition: transform 500ms ease-in-out;
+          transform: translate(0, 0) scale(1.2);
+        }
       }
     }
   }
@@ -227,9 +310,12 @@ header {
   }
   .right {
     margin-left: 5.5rem;
-    width: 630px;
+    width: 610px;
     max-width: 100%;
     padding: 5.1rem 0;
+    .subtitle {
+      font-size: 1.6rem;
+    }
     .bottom-right {
       justify-content: space-between;
       align-items: center;
@@ -242,7 +328,7 @@ header {
   .v-duration {
     color: #005670;
   }
-  
+
   ul {
     gap: 1.5rem;
     li {
@@ -322,6 +408,9 @@ header {
         }
         .box-content {
           padding: 0 2.5rem 8.5rem 2.5rem;
+          p {
+            font-size: 1.6rem;
+          }
           h5 {
             margin: 1.6rem 0;
           }
@@ -337,14 +426,43 @@ header {
     }
   }
 
-  .financial-fundamentals {
-    .boxes .box .box-content .btn-wrapper {
-      justify-content: left;
-      width: auto;
+  .community-env {
+    .boxes {
+      .box {
+        .box-content {
+          p {
+            margin-bottom: 3.5rem;
+          }
+        }
+      }
     }
+  }
+
+  .financial-fundamentals {
+    .tips,
+    .subtitle {
+      font-size: 2.6rem;
+    }
+    .subtitle {
+      margin-bottom: 2.6rem;
+    }
+    .boxes .box .box-content {
+      padding: 3.3rem 2.5rem 11.5rem 3.2rem;
+      h5 {
+        margin: 0;
+      }
+      .btn-wrapper {
+        justify-content: left;
+        width: auto;
+      }
+    }
+
     .money-grow {
       padding: 7rem 0 5rem 0;
       background-color: #dcf3ee;
+      .m-title {
+        font-size: 2.6rem;
+      }
       .blocks {
         padding-left: 3.5rem;
         .block {
@@ -352,6 +470,9 @@ header {
         }
         .block-right {
           padding-left: 3.5rem;
+          p {
+            margin-bottom: 2.8rem;
+          }
         }
       }
     }
@@ -359,25 +480,38 @@ header {
 
   .video-box {
     background-color: #eff4f5;
-    height: 39.3rem;
+    height: 395px;
     overflow: hidden;
     .video-left {
-      width: 60%;
+      width: 64%;
+      position: relative;
+      #left-video-play-btn {
+        position: absolute;
+        left: 44%;
+        top: 39%;
+        cursor: pointer;
+      }
+      video {
+        width: 100%;
+      }
     }
     .video-right {
-      width: 40%;
+      width: 36%;
       display: flex;
       flex-wrap: wrap;
-      padding: 2rem;
+      padding: 2.5rem 1rem 0 1rem;
       box-sizing: border-box;
       gap: 2rem;
-      justify-content: flex-end;
+      justify-content: center;
       .video-list {
         width: 42%;
         font-size: 1.3rem;
         cursor: pointer;
+        .thumbnail-img {
+          margin-bottom: 1rem;
+        }
         &.active {
-          img {
+          .thumbnail-img {
             outline: 0.8rem solid #50c2ac;
             outline-offset: -0.8rem;
           }
@@ -385,7 +519,21 @@ header {
         img {
           width: 100%;
           box-sizing: border-box;
-          margin-bottom: 8px;
+        }
+
+        .thumbnail {
+          position: relative;
+          .tip-play-button {
+            position: absolute;
+            left: 38%;
+            width: 45px;
+            height: 45px;
+            top: 25%;
+            &:hover {
+              transition: transform 300ms ease-in-out;
+              transform: translate(0, 0) scale(1.25);
+            }
+          }
         }
       }
     }
@@ -422,9 +570,6 @@ header {
       }
       p {
         padding-right: 3rem;
-      }
-      a {
-        width: 14rem;
       }
     }
     .box.box-start .box-content {

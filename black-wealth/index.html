@@ -15,7 +15,7 @@
   <body onload="onLoad()">
     <!-- HEADER SECTION START -->
     <header class="container-fluid">
-      <div class="container">
+      <div class="container-full">
         <a href="#" class="d-flex" aria-label="Fidility Net Benefits">
           <img src="./assets/images/fidelity-logo.svg" alt="Fidility" />
           <span class="sr-only">, opens in new window</span>
@@ -45,7 +45,7 @@
     <div class="container-fluid community-update">
       <div class="container">
         <div class="top-left">
-          <p class="mt-0 text-uppercase">Community Update</p>
+          <p class="mt-0 text-uppercase subtitle">Community Update</p>
           <h3 class="mb-0 mt-0">
             Bringing the Invest in My Education (ME)<sup>SM</sup> initiative to
             life
@@ -80,21 +80,26 @@
     <div class="container-fluid financial-support">
       <div class="container d-flex">
         <div class="left">
-          <h3 class="mt-0">
+          <h2 class="mt-0 font-normal">
             Supporting the financial needs of the Black community
-          </h3>
+          </h2>
           <p class="mt-0">
             We're looking for new ways to deliver real help and address the
             specific challenges our customers face every day.
           </p>
           <p>
-            Video length 3:58
+            Video length
+            <span id="watch-video-duration">
+              3:58
+            </span>
           </p>
           <div class="d-flex">
             <a
               href="javascript:void(0)"
               aria-label="watch the video"
               class="btn btn-secondry"
+              id="watch-video-btn"
+              role="button"
             >
               Watch the video
               <span class="sr-only">, opens in new window</span>
@@ -104,13 +109,25 @@
 
         <div class="right">
           <video
+            id="watch-video"
             poster="https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/104/991/Joiya_Poster_Image_704x396.png"
+            src="https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/104/991/QFCM4762000H_45855_PI_Joiya_Mitchell_Fuel_to_Create_Change_3m58s_Fidcom_16x9_NC_(1).mp4"
             controls
           >
-            <source
+            <!-- <source
               src="https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/104/991/QFCM4762000H_45855_PI_Joiya_Mitchell_Fuel_to_Create_Change_3m58s_Fidcom_16x9_NC_(1).mp4"
-            />
+            /> -->
           </video>
+          <img
+            id="play-watch-now"
+            src="./assets/images/video-play-button.png"
+            width="97"
+            height="97"
+            role="button"
+            alt="play button"
+            aria-label="play button"
+            tabindex="0"
+          />
         </div>
       </div>
     </div>
@@ -122,7 +139,7 @@
         <div class="left"></div>
         <div class="right">
           <div class="top-right">
-            <p class="mt-0 text-uppercase">A special Fidelity Webinar</p>
+            <p class="mt-0 text-uppercase subtitle">A special Fidelity Webinar</p>
             <h3 class="mb-0 mt-0">
               How to manage money, deal with debt, and create a financial legacy
             </h3>
@@ -135,11 +152,13 @@
             </p>
           </div>
           <div class="bottom-right d-flex">
-            <h6 class="m-0">Now available on demand</h6>
+            <h6 class="m-0 text-uppercase">Now available on demand</h6>
             <a
+              id="webinar-video-btn"
               href="javascript:void(0)"
               aria-label="Get a reminder"
               class="btn btn-secondry"
+              role="button"
             >
               Watch Now
               <span class="sr-only">, opens in new window</span>
@@ -185,19 +204,27 @@
               These resources can help you manage your money, plan for the
               future, and build wealth that you can pass on.
             </h3>
-            <h5 class="mt-0 font-normal tips">Watch for more money tips</h5>
+            <p class="mt-0 font-normal tips">Watch for more money tips</p>
 
             <div class="video-box d-flex">
               <div class="video-left">
                 <video
+                  id="video-tips"
                   poster="./assets/images/44802_Jamila_Voices_Balance_Spending_Poster_704x396.jpeg"
+                  src="https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/215/595/44802_Jamilla_Voices_Invest_in_Future_You_1.22_MPX_16x9.mp4"
                   controls
                 >
-                  <source
-                    id="vl-container"
-                    src="https://media.fidelity.com/assets/Fidelity_Communications_and_Advertising_VMS/215/595/44802_Jamilla_Voices_Invest_in_Future_You_1.22_MPX_16x9.mp4"
-                  />
                 </video>
+                <img
+                  id="left-video-play-btn"
+                  src="./assets/images/video-play-button.png"
+                  width="97"
+                  height="97"
+                  role="button"
+                  alt="play button"
+                  aria-label="play button"
+                  tabindex="0"
+                />
               </div>
               <div id="append-money-tips" class="video-right">
                 <!-- HTML WILL APPEND USING JS -->
@@ -206,10 +233,11 @@
           </div>
 
           <p class="main-video-duration">
-            Invest in future you <span class="v-duration">1:18</span>
+            Invest in future you 
+            <span id="left-video-duration" class="v-duration">1:18</span>
           </p>
 
-          <h5 class="font-normal">Read more for deeper insights</h5>
+          <h5 class="font-normal subtitle">Read more for deeper insights</h5>
           <div id="append-deeper-insigths" class="boxes">
             <!-- HTML WILL APPEND USING JS -->
           </div>
@@ -217,7 +245,7 @@
 
         <div class="money-grow">
           <div class="container">
-            <h5 class="mt-0 font-normal">See how your money can grow</h5>
+            <h5 class="mt-0 font-normal m-title">See how your money can grow</h5>
             <div id="append-money-grow" class="blocks">
               <!-- HTML WILL APPEND USING JS -->
             </div>
@@ -305,6 +333,24 @@
       </div>
     </footer>
     <!-- FOOTER SECTION END -->
+
+    <!-- OVERLAY SECTION END -->
+    <div id="overlay">
+      <div id="lightbox">
+          <div id="vid-close" role="button">
+            <span></span>
+            <span></span>
+          </div>
+
+          <video
+            id="overlay-video"
+            poster=""
+            src=""
+            controls
+          >
+      </div>
+    </div>
+    <!-- OVERLAY SECTION END -->
 
     <script src="./assets/js/main.js"></script>
   </body>

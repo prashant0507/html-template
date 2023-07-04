@@ -11,6 +11,15 @@
     font-size: 51.5%;
   }
 
+  /**--- TOP BANNER SECTION START ---*/
+  .top-banner {
+    .container-expand {
+      .left {
+        height: auto;
+      }
+    }
+  }
+
   /**--- HEADER SECTION START ---*/
   header {
     a {
@@ -82,6 +91,7 @@
         .box {
           width: 100%;
           display: flex;
+          height: 30rem;
         }
       }
     }
@@ -97,8 +107,18 @@
       .video-right {
         width: 100%;
         justify-content: center;
+        padding-right: 0;
+        padding-left: 0;
+        gap: 4rem;
         .video-list {
           width: 47%;
+          font-size: 1.8rem;
+          &.active {
+            .thumbnail-img {
+              outline: none;
+              outline-offset: unset;
+            }
+          }
         }
       }
     }
@@ -135,6 +155,18 @@
       .left {
         padding-top: 5rem;
         padding-bottom: 4.3rem;
+      }
+    }
+  }
+
+  /**--- FINANCIAL DIRECTION SECTION START ---*/
+  .financial-support {
+    .container {
+      .right {
+        img {
+          left: 20.5rem;
+          top: 8rem;
+        }
       }
     }
   }
@@ -196,14 +228,27 @@
     }
 
     .financial-fundamentals {
+      .video-box {
+        .video-right {
+          .video-list {
+            .thumbnail {
+              .tip-play-button {
+                left: 46%;
+                top: 39%;
+              }
+            }
+          }
+        }
+      }
       .box-img {
-        width: 12%;
+        width: 16%;
       }
 
       .boxes {
         .box {
           .box-content {
             width: calc(100% - 30%);
+            padding: 3.1rem 2.5rem 1.5rem 2.8rem;
           }
         }
       }
@@ -219,7 +264,8 @@
     .boxes {
       .box.box-login,
       .box.box-start {
-        height: 29rem;
+        height: 20rem;
+        padding: 3.5rem 0 10rem 4.1rem;
 
         .box-content {
           padding-right: 50rem;
@@ -280,6 +326,12 @@
       .left,
       .right {
         max-width: 100%;
+        img {
+          left: 17rem;
+          top: 8rem;
+          width: 6rem;
+          height: 6rem;
+        }
       }
     }
   }
@@ -322,8 +374,16 @@
     }
 
     .financial-fundamentals {
+      .video-box {
+        .video-right {
+          .video-list {
+            width: 45%;
+          }
+        }
+      }
+
       .box-img {
-        width: 50%;
+        width: 30%;
       }
 
       .money-grow {
@@ -344,6 +404,7 @@
 
       .boxes {
         .box {
+          height: auto;
           .box-content {
             width: calc(100% - 50%);
           }

@@ -7,6 +7,59 @@ body {
   font-family: "Fidelity Sans", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
 }
+#overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+#overlay #lightbox {
+  width: 90%;
+  max-width: 127rem;
+  display: none;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9000;
+}
+#overlay #lightbox video {
+  width: 100%;
+}
+#overlay #lightbox #vid-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #968f8f;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 4.8rem;
+  font-weight: 700;
+  border: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  z-index: 30;
+}
+#overlay #lightbox #vid-close span {
+  border: 0;
+  width: 60%;
+  height: 0.3rem;
+  background-color: #494c4d;
+  display: block;
+  border-radius: 2.5rem;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#overlay #lightbox #vid-close span:last-of-type {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
 /**--- SCREEN READER SECTION ---*/
 .sr-only {
   position: absolute;
@@ -65,6 +118,9 @@ a {
 h1 {
   font-size: 5.2rem;
 }
+h2 {
+  font-size: 3.5rem;
+}
 h3 {
   font-size: 3rem;
 }
@@ -85,7 +141,7 @@ sup {
 }
 /**--- BUTTON SECTION ---*/
 .btn {
-  padding: 1.2rem 3.1rem;
+  padding: 1.2rem 0;
   text-align: center;
   cursor: pointer;
   border-radius: 1rem;
@@ -95,10 +151,14 @@ sup {
 .btn-secondry {
   background-color: #fff;
   color: #000;
+  width: 19rem;
+  box-sizing: border-box;
 }
 .btn-primary {
   background-color: #368727;
   color: white;
+  width: 19rem;
+  box-sizing: border-box;
 }
 .btn.btn-secondry:hover {
   background-color: #f1f3c3;
@@ -115,6 +175,11 @@ header {
 header img {
   width: 123px;
 }
+header .container-full {
+  margin: 0 auto;
+  width: 1400px;
+  max-width: 100%;
+}
 /**--- TOP BANNER SECTION START ---*/
 .top-banner {
   background-color: #f1f4cb;
@@ -129,8 +194,10 @@ header img {
 .top-banner .container-expand .left {
   width: 43rem;
   max-width: 100%;
-  padding-top: 9.5rem;
+  padding-top: 12.5rem;
   padding-bottom: 9.3rem;
+  height: 550px;
+  box-sizing: border-box;
 }
 .top-banner .container-expand .left h1 {
   margin: 0;
@@ -140,6 +207,9 @@ header img {
   background-color: #009681;
   padding: 5.5rem 0;
   color: white;
+}
+.community-update .top-left .subtitle {
+  font-size: 1.6rem;
 }
 .community-update .bottom-left {
   display: flex;
@@ -164,7 +234,7 @@ header img {
   justify-content: space-between;
 }
 .financial-support .container .left {
-  width: 37.5rem;
+  width: 36.5rem;
   padding-right: 4rem;
 }
 .financial-support .container .left h3 {
@@ -173,10 +243,20 @@ header img {
 .financial-support .container .right {
   cursor: pointer;
   width: 57rem;
+  position: relative;
 }
 .financial-support .container .right video {
   width: 98%;
   outline: 1rem solid #fff;
+}
+.financial-support .container .right img {
+  position: absolute;
+  left: 22.5rem;
+  top: 10rem;
+}
+.financial-support .container .right img:hover {
+  transition: transform 500ms ease-in-out;
+  transform: translate(0, 0) scale(1.2);
 }
 /**--- FIDELITY WEBINAR SECTION START ---*/
 .fidility-webinar {
@@ -191,9 +271,12 @@ header img {
 }
 .fidility-webinar .right {
   margin-left: 5.5rem;
-  width: 630px;
+  width: 610px;
   max-width: 100%;
   padding: 5.1rem 0;
+}
+.fidility-webinar .right .subtitle {
+  font-size: 1.6rem;
 }
 .fidility-webinar .right .bottom-right {
   justify-content: space-between;
@@ -284,6 +367,10 @@ header img {
 .tab-section .financial-fundamentals .boxes .box .box-content {
   padding: 0 2.5rem 8.5rem 2.5rem;
 }
+.tab-section .community-env .boxes .box .box-content p,
+.tab-section .financial-fundamentals .boxes .box .box-content p {
+  font-size: 1.6rem;
+}
 .tab-section .community-env .boxes .box .box-content h5,
 .tab-section .financial-fundamentals .boxes .box .box-content h5 {
   margin: 1.6rem 0;
@@ -296,6 +383,22 @@ header img {
   display: flex;
   justify-content: center;
 }
+.tab-section .community-env .boxes .box .box-content p {
+  margin-bottom: 3.5rem;
+}
+.tab-section .financial-fundamentals .tips,
+.tab-section .financial-fundamentals .subtitle {
+  font-size: 2.6rem;
+}
+.tab-section .financial-fundamentals .subtitle {
+  margin-bottom: 2.6rem;
+}
+.tab-section .financial-fundamentals .boxes .box .box-content {
+  padding: 3.3rem 2.5rem 11.5rem 3.2rem;
+}
+.tab-section .financial-fundamentals .boxes .box .box-content h5 {
+  margin: 0;
+}
 .tab-section .financial-fundamentals .boxes .box .box-content .btn-wrapper {
   justify-content: left;
   width: auto;
@@ -303,6 +406,9 @@ header img {
 .tab-section .financial-fundamentals .money-grow {
   padding: 7rem 0 5rem 0;
   background-color: #dcf3ee;
+}
+.tab-section .financial-fundamentals .money-grow .m-title {
+  font-size: 2.6rem;
 }
 .tab-section .financial-fundamentals .money-grow .blocks {
   padding-left: 3.5rem;
@@ -313,36 +419,65 @@ header img {
 .tab-section .financial-fundamentals .money-grow .blocks .block-right {
   padding-left: 3.5rem;
 }
+.tab-section .financial-fundamentals .money-grow .blocks .block-right p {
+  margin-bottom: 2.8rem;
+}
 .tab-section .video-box {
   background-color: #eff4f5;
-  height: 39.3rem;
+  height: 395px;
   overflow: hidden;
 }
 .tab-section .video-box .video-left {
-  width: 60%;
+  width: 64%;
+  position: relative;
+}
+.tab-section .video-box .video-left #left-video-play-btn {
+  position: absolute;
+  left: 44%;
+  top: 39%;
+  cursor: pointer;
+}
+.tab-section .video-box .video-left video {
+  width: 100%;
 }
 .tab-section .video-box .video-right {
-  width: 40%;
+  width: 36%;
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
+  padding: 2.5rem 1rem 0 1rem;
   box-sizing: border-box;
   gap: 2rem;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .tab-section .video-box .video-right .video-list {
   width: 42%;
   font-size: 1.3rem;
   cursor: pointer;
 }
-.tab-section .video-box .video-right .video-list.active img {
+.tab-section .video-box .video-right .video-list .thumbnail-img {
+  margin-bottom: 1rem;
+}
+.tab-section .video-box .video-right .video-list.active .thumbnail-img {
   outline: 0.8rem solid #50c2ac;
   outline-offset: -0.8rem;
 }
 .tab-section .video-box .video-right .video-list img {
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 8px;
+}
+.tab-section .video-box .video-right .video-list .thumbnail {
+  position: relative;
+}
+.tab-section .video-box .video-right .video-list .thumbnail .tip-play-button {
+  position: absolute;
+  left: 38%;
+  width: 45px;
+  height: 45px;
+  top: 25%;
+}
+.tab-section .video-box .video-right .video-list .thumbnail .tip-play-button:hover {
+  transition: transform 300ms ease-in-out;
+  transform: translate(0, 0) scale(1.25);
 }
 /**--- LATINO COMMUNITY SECTION START ---*/
 .latino-community {
@@ -377,9 +512,6 @@ header img {
 }
 .latino-community .boxes .box p {
   padding-right: 3rem;
-}
-.latino-community .boxes .box a {
-  width: 14rem;
 }
 .latino-community .boxes .box.box-start .box-content {
   padding-right: 22rem;

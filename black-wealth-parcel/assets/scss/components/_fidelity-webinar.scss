@@ -1,0 +1,22 @@
+.fidility-webinar {
+  background-color: $bg-fidility-webinar;
+  color: $clr-secondry;
+  .left {
+    background-image: url("../images/registration-image.jpeg");
+    width: 40%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+  .right {
+    width: 43%;
+    max-width: 100%;
+    margin-left: 4%;
+    padding: 5.5rem 0;
+    .subtitle {
+      font-size: 1.6rem;
+    }
+    .bottom-right {
+      @include alignment($horizontal-alignment: space-between);
+    }
+  }
+}

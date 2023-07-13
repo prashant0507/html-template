@@ -1,0 +1,48 @@
+.overlay-wrapper {
+  background-color: $bg-overlay;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  .lightbox-wrapper {
+    width: 90%;
+    max-width: 127rem;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9000;
+    video {
+      width: 100%;
+    }
+    .close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      border-radius: 50%;
+      background-color: $bg-close-overlay;
+      font-size: 4.8rem;
+      font-weight: 700;
+      border: 0;
+      width: 4rem;
+      height: 4rem;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 30;
+      span {
+        border: 0;
+        width: 60%;
+        height: 0.3rem;
+        background-color: $bg-cross-overlay;
+        border-radius: 2.5rem;
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        top: 50%;
+        left: 50%;
+      }
+      span:last-of-type {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+}

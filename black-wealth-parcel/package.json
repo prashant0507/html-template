@@ -1,0 +1,24 @@
+{
+  "name": "black-wealth-parcel",
+  "version": "1.0.0",
+  "description": "black wealth with parcel",
+  "scripts": {
+    "start": "parcel index.html",
+    "start-watch": "parcel index.html && parcel watch index.html",
+    "build": "parcel build index.html",
+    "build-image": "parcel build assets/images/* --no-cache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "black",
+    "wealth"
+  ],
+  "author": "Prashant",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.9.3"
+  }
+}

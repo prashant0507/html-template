@@ -1,0 +1,484 @@
+/* For Mobile Portrait View */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-width: 640px) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 1400px) {
+  header {
+    .container-full {
+      width: 1100px;
+    }
+  }
+
+  .top-banner {
+    .container-expand {
+      .left {
+        height: auto;
+        padding-top: 11.5rem;
+        padding-bottom: 8.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    font-size: 51.5%;
+  }
+
+  /**--- TOP BANNER SECTION START ---*/
+  .top-banner {
+    .container-expand {
+      .left {
+        height: auto;
+      }
+    }
+  }
+
+  /**--- HEADER SECTION START ---*/
+  header {
+    a {
+      justify-content: center;
+    }
+  }
+
+  /**--- FIDILITY WEBINAR START ---*/
+  .fidility-webinar {
+    .container-expand {
+      flex-direction: column-reverse;
+    }
+    .left {
+      background-image: url("../images/register-img-mobile.jpeg");
+      width: auto;
+    }
+    .right {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  /**--- TAB SECTION START ---*/
+  .tab-section {
+    .tips {
+      margin: 0;
+    }
+    .financial-fundamentals {
+      .box-img {
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        img {
+          display: none;
+        }
+      }
+      .box-img1 {
+        background-image: url("../images/card-img-1-mobile.jpeg");
+      }
+      .box-img2 {
+        background-image: url("../images/card-img-2-mobile.jpeg");
+      }
+      .box-img3 {
+        background-image: url("../images/card-img-3-mobile.jpeg");
+      }
+      .money-grow {
+        .blocks {
+          padding-left: 0;
+
+          .block-right {
+            padding-left: 0;
+            width: 56%;
+            margin: 0 auto;
+          }
+
+          .block {
+            flex-direction: column;
+
+            .block-left {
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .boxes {
+        flex-direction: column;
+
+        .box {
+          width: 100%;
+          display: flex;
+          height: 30rem;
+        }
+      }
+    }
+    .main-video-duration {
+      display: none;
+    }
+    .video-box {
+      height: auto;
+      background-color: transparent;
+      .video-left {
+        display: none;
+      }
+      .video-right {
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+        padding-left: 0;
+        gap: 4rem;
+        .video-list {
+          width: 47%;
+          font-size: 1.8rem;
+          &.active {
+            .thumbnail-img {
+              outline: none;
+              outline-offset: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /**--- LATINO COMMUNITY SECTION START ---*/
+  .latino-community {
+    .boxes {
+      flex-direction: column;
+      .box-login {
+        background-image: url("../images/action-img-1-mobile.jpeg");
+      }
+
+      .box-start {
+        background-image: url("../images/action-img-2-mobile.jpeg");
+      }
+    }
+  }
+
+  /**--- FOOTER SECTION START ---*/
+  footer {
+    .container {
+      text-align: left;
+    }
+  }
+}
+
+/* For Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  $common-pl: 2rem;
+  /**--- TOP BANNER SECTION START ---*/
+  .top-banner {
+    .container-expand {
+      .left {
+        padding-top: 5rem;
+        padding-bottom: 4.3rem;
+      }
+    }
+  }
+
+  /**--- FINANCIAL DIRECTION SECTION START ---*/
+  .financial-support {
+    .container {
+      .right {
+        img {
+          left: 20.5rem;
+          top: 8rem;
+        }
+      }
+    }
+  }
+
+  /**--- FIDILITY WEBINAR SECTION START ---*/
+  .fidility-webinar {
+    .left {
+      height: 39rem;
+    }
+    .right {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      box-sizing: border-box;
+    }
+  }
+
+  /**--- COMMUNITY UPDATE SECTION START ---*/
+  .community-update {
+    .top-left {
+      width: 72rem;
+    }
+
+    .bottom-left p {
+      width: 60rem;
+    }
+  }
+
+  /**--- TAB SECTION START ---*/
+  .tab-section {
+    .container {
+      padding: 0 4rem;
+    }
+    ul {
+      li:first-child {
+        padding-left: 0;
+
+        .arrow {
+          left: 50%;
+        }
+      }
+
+      li:last-child {
+        padding-right: 0;
+
+        .arrow {
+          left: 50%;
+        }
+      }
+    }
+
+    .community-env {
+      .boxes {
+        gap: 2rem;
+
+        .box {
+          width: 48%;
+        }
+      }
+    }
+
+    .financial-fundamentals {
+      .video-box {
+        .video-right {
+          .video-list {
+            .thumbnail {
+              .tip-play-button {
+                left: 46%;
+                top: 39%;
+              }
+            }
+          }
+        }
+      }
+      .box-img {
+        width: 16%;
+      }
+
+      .boxes {
+        .box {
+          .box-content {
+            width: calc(100% - 30%);
+            padding: 3.1rem 2.5rem 1.5rem 2.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  /**--- LATINO COMMUNITY SECTION START ---*/
+  .latino-community {
+    .container {
+      padding: 0 4rem;
+    }
+
+    .boxes {
+      .box.box-login,
+      .box.box-start {
+        height: 20rem;
+        padding: 3.5rem 0 10rem 4.1rem;
+
+        .box-content {
+          padding-right: 50rem;
+        }
+      }
+    }
+
+    .bottom {
+      justify-content: space-between;
+    }
+  }
+
+  /**--- FOOTER SECTION START ---*/
+  footer {
+    .container {
+      padding: 0 8rem;
+    }
+  }
+
+  .container {
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-width: 640px) {
+  /**--- TOP BANNER SECTION START ---*/
+  .top-banner {
+    .container-expand {
+      background-position: bottom center;
+      background-size: 100% auto;
+      .left {
+        padding-top: 5rem;
+        padding-bottom: 38rem;
+      }
+    }
+  }
+
+  /**--- COMMUNITY UPDATE SECTION START ---*/
+  .community-update {
+    .bottom-left {
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+
+  /**--- FINANCIAL DIRECTION SECTION START ---*/
+  .financial-support {
+    .container {
+      flex-direction: column;
+      .left {
+        padding-bottom: 4rem;
+      }
+      .left,
+      .right {
+        max-width: 100%;
+        img {
+          left: 17rem;
+          top: 8rem;
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+    }
+  }
+
+  /**--- FIDILITY WEBINAR SECTION START ---*/
+  .fidility-webinar {
+    .left {
+      height: 153px;
+    }
+    .right {
+      padding: 5.1rem 2rem;
+      box-sizing: border-box;
+      .bottom-right {
+        align-items: flex-start;
+        flex-direction: column;
+        h6 {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  /**--- TAB SECTION START ---*/
+  .tab-section {
+    ul {
+      gap: 0;
+      li {
+        font-size: 1.4rem;
+      }
+      li:first-child,
+      li:last-child {
+        padding-left: 0;
+        padding-right: 0;
+
+        .arrow {
+          left: 50%;
+          top: 38px;
+        }
+      }
+    }
+
+    .financial-fundamentals {
+      .video-box {
+        .video-right {
+          .video-list {
+            width: 45%;
+          }
+        }
+      }
+
+      .box-img {
+        width: 30%;
+      }
+
+      .money-grow {
+        .blocks {
+          .block-right {
+            width: 80%;
+          }
+
+          .block {
+            .block-left {
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .boxes {
+        .box {
+          height: auto;
+          .box-content {
+            width: calc(100% - 50%);
+          }
+        }
+      }
+    }
+
+    .community-env {
+      .boxes {
+        .box {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /**--- LATINO COMMUNITY SECTION START ---*/
+  .latino-community {
+    .boxes {
+      .box {
+        background-size: contain;
+        padding: 1.5rem 0 7rem 1.5rem;
+        .box-content {
+          padding-right: 23rem;
+          .btn-wrapper {
+            bottom: 2rem;
+          }
+          h5 {
+            font-size: 1.8rem;
+          }
+          p {
+            font-size: 1.4rem;
+          }
+          .btn {
+            padding: 1.2rem 0;
+          }
+        }
+      }
+    }
+    .bottom {
+      flex-direction: column;
+      position: relative;
+      p {
+        padding-right: 0;
+      }
+      a {
+        width: 12rem;
+        position: absolute;
+        right: 0;
+        top: 7rem;
+      }
+    }
+  }
+
+  .container {
+    box-sizing: border-box;
+    padding: 0 2rem;
+  }
+}

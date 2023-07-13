@@ -1,0 +1,22 @@
+.financial-support {
+  background-color: $bg-financial-support;
+  padding: 6.5rem 0;
+
+  .container {
+    justify-content: space-between;
+    .left {
+      width: 33%;
+      padding-right: 4%;
+    }
+
+    .right {
+      cursor: pointer;
+      width: 52%;
+      position: relative;
+      video {
+        width: 100%;
+        outline: 1rem solid $outline-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.community-update {
+  background-color: $bg-community-update;
+  padding: 5.5rem 0;
+  color: $clr-secondry;
+  .top-left {
+    .subtitle {
+      font-size: 1.6rem;
+    }
+  }
+  .bottom-left {
+    @include alignment($horizontal-alignment: space-between);
+
+    p {
+      width: 78rem;
+    }
+    a {
+      color: $clr-secondry;
+      &.btn {
+        color: $clr-primary;
+      }
+    }
+  }
+}

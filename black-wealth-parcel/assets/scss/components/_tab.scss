@@ -1,0 +1,219 @@
+.tab-section {
+  .v-duration {
+    color: $clr-video-duration;
+  }
+
+  /** Tab CSS */
+  ul {
+    gap: 1.5rem;
+    li {
+      padding: 1.6rem;
+      cursor: pointer;
+      text-align: center;
+      color: $clr-secondry;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background-color: $bg-tab;
+      list-style: none;
+      flex: 1;
+      position: relative;
+      &.active,
+      &:hover {
+        background-color: $bg-tab-hover-active;
+      }
+      &.active {
+        .arrow {
+          display: block;
+        }
+      }
+      &:first-child {
+        padding-left: 15.7rem;
+        .arrow {
+          left: 38.5rem;
+        }
+      }
+      &:last-child {
+        padding-right: 15.7rem;
+        .arrow {
+          left: 26.5rem;
+        }
+      }
+      .arrow {
+        width: 0;
+        height: 0;
+        border-left: 1.5rem solid transparent;
+        border-right: 1.5rem solid transparent;
+        border-top: 1.5rem solid $border-tab-arrow;
+        font-size: 0;
+        line-height: 0;
+        // float: left;
+        position: absolute;
+        top: 6rem;
+        // display: none;
+      }
+    }
+  }
+
+  /** Tab Content CSS */
+  .tab-content {
+    // display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  /** Common css for community-env and financial-fundamentals */
+  .financial-fundamentals,
+  .community-env {
+    .title {
+      padding-top: 5.5rem;
+      padding-bottom: 3.6rem;
+    }
+    .boxes {
+      // display: flex;
+      padding-bottom: 13rem;
+      gap: 1.5rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .box {
+        background-color: $bg-box;
+        position: relative;
+        width: 32%;
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+        .box-content {
+          padding: 0 2.5rem 8.5rem 2.5rem;
+          p {
+            font-size: 1.6rem;
+          }
+          h5 {
+            margin: 1.6rem 0;
+          }
+          .btn-wrapper {
+            position: absolute;
+            bottom: 3rem;
+            width: calc(100% - 5rem);
+            // display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  /** css for financial-fundamentals */
+  .financial-fundamentals {
+    .tips,
+    .subtitle {
+      font-size: 2.6rem;
+    }
+    .subtitle {
+      margin-bottom: 2.6rem;
+    }
+    .boxes .box .box-content {
+      padding: 3.3rem 2.5rem 11.5rem 3.2rem;
+      h5 {
+        margin: 0;
+      }
+      .btn-wrapper {
+        justify-content: left;
+        width: auto;
+      }
+    }
+    .money-grow {
+      padding: 7rem 0 5rem 0;
+      background-color: $bg-money-grow;
+      .m-title {
+        font-size: 2.6rem;
+      }
+      .blocks {
+        padding-left: 3.5rem;
+        .block {
+          margin-bottom: 6rem;
+        }
+        .block-right {
+          padding-left: 3.5rem;
+          p {
+            margin-bottom: 2.8rem;
+          }
+        }
+      }
+    }
+
+    .video-box {
+      background-color: $bg-box;
+      height: 39.5rem;
+      overflow: hidden;
+      .video-left {
+        width: 64%;
+        position: relative;
+        #left-video-play-btn {
+          position: absolute;
+          left: 44%;
+          top: 39%;
+          cursor: pointer;
+        }
+        video {
+          width: 100%;
+        }
+      }
+      .video-right {
+        width: 36%;
+        // display: flex;
+        flex-wrap: wrap;
+        padding: 2.5rem 1rem 0 1rem;
+        box-sizing: border-box;
+        gap: 2rem;
+        justify-content: center;
+        .video-list {
+          width: 42%;
+          font-size: 1.3rem;
+          cursor: pointer;
+          .thumbnail-img {
+            margin-bottom: 1rem;
+          }
+          &.active {
+            .thumbnail-img {
+              outline: 0.8rem solid $border-clr-thumbnail;
+              outline-offset: -0.8rem;
+            }
+          }
+          img {
+            width: 100%;
+            box-sizing: border-box;
+          }
+
+          .thumbnail {
+            position: relative;
+            .tip-play-button {
+              position: absolute;
+              left: 38%;
+              width: 4.5rem;
+              height: 4.5rem;
+              top: 25%;
+              &:hover {
+                transition: transform 300ms ease-in-out;
+                transform: translate(0, 0) scale(1.25);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /** css for community-env */
+  .community-env {
+    .boxes {
+      .box {
+        .box-content {
+          p {
+            margin-bottom: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+}

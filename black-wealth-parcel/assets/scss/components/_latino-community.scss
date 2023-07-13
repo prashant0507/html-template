@@ -1,0 +1,50 @@
+.latino-community {
+  background-color: $bg-latino-community;
+  padding: 7.5rem 0;
+  color: $clr-secondry;
+  .top-subtitle {
+    margin-bottom: 6rem;
+  }
+  .bottom-subtitle {
+    margin-top: 7.5rem;
+  }
+  .boxes {
+    color: $clr-primary;
+    gap: 4rem;
+    .box {
+      background-color: $bg-latino-community-box;
+      padding: 4.5rem 0 10rem 4.1rem;
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+      position: relative;
+      .box-content {
+        padding-right: 20rem;
+      }
+      .btn-wrapper {
+        position: absolute;
+        bottom: 4rem;
+      }
+      p {
+        padding-right: 3rem;
+      }
+    }
+    .box.box-start .box-content {
+      padding-right: 22rem;
+    }
+    .box-login {
+      background-image: url("../images/action-img-1.jpeg");
+    }
+    .box-start {
+      background-image: url("../images/action-img-2.jpeg");
+    }
+  }
+  .bottom {
+    margin-top: 1.2rem;
+    p {
+      width: 63rem;
+      max-width: 100%;
+      padding-right: 5rem;
+    }
+  }
+}

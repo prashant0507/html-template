@@ -1,0 +1,71 @@
+:root {
+  font-size: 62.5%; // default value 16 to 10
+}
+
+body {
+  margin: 0;
+  font-family: "Fidelity Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem; // (10*1.6 = 16px)
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 2rem;
+}
+
+.container-expand {
+  width: 1400px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

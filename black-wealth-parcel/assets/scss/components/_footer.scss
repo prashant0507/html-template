@@ -1,0 +1,14 @@
+footer {
+  padding: 8.2rem 0;
+  text-align: center;
+  color: $clr-footer-text;
+  .logo {
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+  .copyright {
+    p {
+      font-size: $font-size-xs;
+    }
+  }
+}

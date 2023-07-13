@@ -1,0 +1,39 @@
+p {
+  font-size: $font-size-p;
+}
+
+a {
+  font-size: $font-size-link;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+sup {
+  font-size: $font-size-xs;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.font-normal {
+  font-weight: normal;
+}

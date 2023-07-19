@@ -4,8 +4,9 @@
 
   .container {
     justify-content: space-between;
+
     .left {
-      width: 33%;
+      width: 34%;
       padding-right: 4%;
     }
 
@@ -13,10 +14,71 @@
       cursor: pointer;
       width: 52%;
       position: relative;
+
       video {
         width: 100%;
         outline: 1rem solid $outline-white;
       }
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+  .financial-support {
+    .container {
+      .left {
+        width: 35%;
+      }
+
+      .right {
+        img {
+          transform: translate(-50%, -65%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 792px) {
+  .financial-support {
+    .container {
+      .left {
+        width: 38%;
+      }
+
+      .right {
+        width: 55%;
+
+        img {
+          transform: translate(-50%, -75%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .financial-support {
+    .container {
+      flex-direction: column;
+
+      .left {
+        padding-bottom: 4rem;
+      }
+
+      .left,
+      .right {
+        max-width: 100%;
+        width: 100%;
+
+        img {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+
     }
   }
 }

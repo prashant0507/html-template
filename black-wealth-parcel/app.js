@@ -1,5 +1,3 @@
-// TESTING
-
 import financialVideo from "./assets/js/components/financial-support";
 import webinarVideo from "./assets/js/components/fidility-wbinar";
 

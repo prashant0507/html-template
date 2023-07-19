@@ -1,11 +1,13 @@
 .top-banner {
   background-color: $bg-banner;
+
   .container-expand {
     background-image: url("../images/hero-banner-1.jpeg");
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 52% auto;
     height: inherit;
+
     .left {
       box-sizing: border-box;
       width: 50rem;
@@ -14,6 +16,89 @@
       padding-top: 12.5rem;
       padding-bottom: 9.3rem;
       padding-right: 5rem;
+
+      h2 {
+        font-size: $font-size-big;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .top-banner {
+    .container-expand {
+      .left {
+        height: auto;
+        padding-top: 11.5rem;
+        padding-bottom: 8.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .top-banner {
+    .container-expand {
+      background-size: contain;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .top-banner {
+    .container-expand {
+      background-size: contain;
+
+      .left {
+        h2 {
+          font-size: 4.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .top-banner {
+    .container-expand {
+      background-size: contain;
+
+      .left {
+        height: auto;
+
+        h2 {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .top-banner {
+    .container-expand {
+      .left {
+        padding-top: 5rem;
+        padding-bottom: 4.3rem;
+        width: 37%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .top-banner {
+    .container-expand {
+      background-position: bottom center;
+      background-size: 100% auto;
+
+      .left {
+        padding-top: 10%;
+        padding-bottom: 90%;
+        padding-right: 0;
+        width: 100%;
+      }
     }
   }
 }

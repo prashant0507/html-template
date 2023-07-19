@@ -188,15 +188,15 @@
           .thumbnail {
             position: relative;
             .tip-play-button {
-              position: absolute;
-              left: 38%;
+              // position: absolute;
+              // left: 38%;
+              // top: 25%;
               width: 4.5rem;
               height: 4.5rem;
-              top: 25%;
-              &:hover {
-                transition: transform 300ms ease-in-out;
-                transform: translate(0, 0) scale(1.25);
-              }
+              // &:hover {
+              //   transition: transform 300ms ease-in-out;
+              //   transform: translate(0, 0) scale(1.25);
+              // }
             }
           }
         }

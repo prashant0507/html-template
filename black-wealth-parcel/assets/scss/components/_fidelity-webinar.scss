@@ -1,22 +1,99 @@
 .fidility-webinar {
   background-color: $bg-fidility-webinar;
   color: $clr-secondry;
+
   .left {
     background-image: url("../images/registration-image.jpeg");
-    width: 40%;
-    background-size: 100% auto;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 40%;
   }
+
   .right {
     width: 43%;
     max-width: 100%;
     margin-left: 4%;
     padding: 5.5rem 0;
+
     .subtitle {
       font-size: 1.6rem;
     }
+
     .bottom-right {
       @include alignment($horizontal-alignment: space-between);
+    }
+  }
+}
+
+/** RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+  .fidility-webinar {
+    .container-expand {
+      flex-direction: column-reverse;
+    }
+
+    .left {
+      background-image: url("../images/register-img-mobile.jpeg");
+      width: auto;
+    }
+
+    .right {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+  .fidility-webinar {
+    .left {
+      padding-top: 39%;
+    }
+
+    .right {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      box-sizing: border-box;
+
+      .top-right {
+        h3 {
+          padding-right: 10%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 792px) {
+  // .fidility-webinar {
+  //   .left {
+  //     height: 36rem;
+  //   }
+  // }
+}
+
+@media screen and (max-width: 767px) {
+  .fidility-webinar {
+    .left {
+      background-size: 100% auto;
+      height: auto;
+      padding-top: 39%;
+    }
+
+    .right {
+      padding: 5.1rem 2rem;
+      box-sizing: border-box;
+
+      .bottom-right {
+        align-items: flex-start;
+        flex-direction: column;
+
+        h6 {
+          padding-bottom: 2rem;
+        }
+      }
     }
   }
 }
